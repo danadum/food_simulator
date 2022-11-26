@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>My food simulator</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="scripts/get_datas.js"></script>
+        <script src="scripts/add_datas.js"></script>
+        <script src="scripts/load_languages.js"></script>
+        <script src="scripts/calculations.js"></script>
+        <script src="scripts/setup.js"></script>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <main>
+            <form id="form_simulator">
+                <div id="div_language">
+                    <label for="select_language" id="label_language"></label>
+                    <select id="select_language">
+                    </select>
+                </div>
+                <h1 id="title_total"></h1>
+                <fieldset id="fieldset_boosts">
+                    <div>
+                        <label for="select_castle" id="label_castle"></label>
+                        <select id="select_castle">
+                        </select>
+                    </div>
+                    <div>
+                        <label for="input_po" id="label_po"></label>
+                        <input type="tel" id="input_po" placeholder="Ex : 25000">
+                    </div>
+                    <div>
+                        <label for="checkbox_overseer" id="label_overseer"></label>
+                        <input type="checkbox" id="checkbox_overseer">
+                    </div>
+                    <div>
+                        <label for="checkbox_subscription" id="label_subscription"></label>
+                        <input type="checkbox" id="checkbox_subscription">
+                    </div>
+                    <div>
+                        <label for="select_mill" id="label_mill"></label>
+                        <select id="select_mill" class="select_level">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="select_vip" id="label_vip"></label>
+                        <select id="select_vip" class="select_level">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="select_gallantry" id="label_gallantry"></label>
+                        <select id="select_gallantry" class="select_foodboost select_titles">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="select_storm" id="label_storm"></label>
+                        <select id="select_storm" class="select_foodboost select_titles">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="input_emblem" id="label_emblem"></label>
+                        <input type="tel" id="input_emblem" class="input_positive">
+                    </div>
+                    <div>
+                        <label for="input_hunt" id="label_hunt"></label>
+                        <input type="tel" id="input_hunt" class="input_positive">
+                    </div>
+                    <div>
+                        <label for="input_villages" id="label_villages"></label>
+                        <input type="tel" id="input_villages" class="input_positive">
+                    </div>
+                    <div>
+                        <label for="select_core" id="label_core"></label>
+                        <select id="select_core" class="select_foodboost select_level">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="input_metropolis" id="label_metropolis"></label>
+                        <input type="tel" id="input_metropolis" placeholder="Ex : 5000" class="input_positive">
+                    </div>
+                    <div>
+                        <label for="input_build" id="label_build"></label>
+                        <input type="tel" id="input_build" placeholder="Ex : 5000" class="input_positive">
+                    </div>
+                    <div>
+                        <label for="input_hero" id="label_hero"></label>
+                        <input type="tel" id="input_hero" class="input_positive">
+                    </div>
+                    <div>
+                        <label for="input_look" id="label_look"></label>
+                        <input type="tel" id="input_look" class="input_positive" placeholder="Ex : 5000">
+                        <input type="tel" id="input_look2" class="input_positive" placeholder="Ex : 5 %">
+                    </div>
+                    <div>
+                        <label for="select_research" id="label_research"></label>
+                        <select id="select_research" class="select_foodboost select_level">
+                            <option value=""></option>
+                        </select>
+                    </div>
+                </fieldset>
+                <table>
+                    <thead>
+                        <tr>
+                            <th id="header_building"></th>
+                            <th id="header_level"></th>
+                            <th id="header_workload"></th>
+                            <th id="header_damages"></th>
+                            <th id="header_primary"></th>
+                            <th id="header_relic"></th>
+                            <th id="header_production"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody_buildings">
+                        <tr>
+                            <td>
+                                <p class="select_building"></p>
+                            </td>
+                            <td>
+                                <select class="select_level"></select>
+                            </td>
+                            <td>
+                                <p class="text_workload"></p>
+                            </td>
+                            <td>
+                                <input type="tel" class="input_damages input_positive" data-max="100">
+                            </td>
+                            <td>
+                                <p class="select_primary">/</p>
+                            </td>
+                            <td>
+                                <p class="select_relic">/</p>
+                            </td>
+                            <td>
+                                <p class="text_production"></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="8">
+                                <input type="button" id="button_add_row" value="+">
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </form>
+            <div id="filler"></div>
+            <div id="loader"></div>
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>

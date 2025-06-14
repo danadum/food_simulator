@@ -1,4 +1,4 @@
-let proxy = "https://sheltered-everglades-24913.fly.dev/";
+let proxy = "https://cors-buster.fly.dev/";
 let text_version;
 let text_database;
 let item_version;
